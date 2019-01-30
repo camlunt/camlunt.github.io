@@ -1,42 +1,66 @@
 <html>
 <head>
-<link href="myfirstcss.css" type="text/css" rel="stylesheet" />
-<title> Go Connected Web App </title>
-<head>
+   <link href="myfirstcss.css" type="text/css" rel="stylesheet" />
+   <title> Go Connected Web App </title>
+</head>
 <body>
-  
 <div class="myheader">
-  <p><h1> Go Connected! </p></h1>
-  <p><h4>&nbsp;</h4> </p>
-     <h2> <p> Here you can compute network connectivity for a general city or a route. <h2> </p>
-    <p> <h4>&nbsp;</h4> </p> 
-  <h5><p>Steps: Search for your city &rarr; Select analysis type &rarr; If prompted, enter origin/destination &rarr; Select mode choice &rarr; Select trip purpose &rarr; Click submit!</p></h5>
-  <h4>&nbsp;</h4></div>
-  <h3>
-    
-  <table column=2> <tr> <th><tr><td><form> <p>City name: <input type="text" name="city"> &nbsp;&nbsp;<input type="button" value="Find"> </p>
-  
-    <form> <p> <input type="radio" name="AnalysisType" value="OD"> Origin-Destination<br>
-      <input type="radio" name="AnalysisType" value="general"> General Analysis </p> </form>
-  <form><p>Origin: <input type="text" name="origin" value="">  </p>
- <p>Destination: <input type="text" name="destination" value=""></form></p>
- <form> <p> Mode Choice: <select> 
-   <option disable selected value> --- Select an Option --- </option>
-   <option value="ped"> Walking </option>
-   <option value="bike"> Biking </option>
-   <option value="transit"> Public Transit </option> </p> </form> </select>  
- <form> <p> Trip Purpose: <select> 
-   <option disable selected value> --- Select an Option --- </option>
-   <option value="commute"> Commute </option>
-   <option value="exercise"> Exercise </option>
-   <option value="shopping"> Shopping </option> </select> </p> </form> </td>
-  <td><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12180.962749001712!2d-111.66552308022459!3d40.25915564999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1548789719033" width="350" height="200" frameborder="0" style="border:0" allowfullscreen> </iframe>
-    <div id="googleMap" align="right" width="10px" height="400px"></div> </td></tr></table>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="button" value="Clear" style="font-size: 16px"> 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="button" value="Submit" style="font-size: 16px">
-  </h3> </body> </html>
+  <h1> <p> Go Connected! </p> </h1>
+  <h4> <p> &nbsp; </p> </h4> 
+  <h2> <p> Here you can compute network connectivity for a general city or a route. </p> <h2> 
+  <h4> <p> &nbsp; </p> </h4> 
+  <h5> <p> Steps: Search for your city &rarr; Select analysis type &rarr; If prompted, enter origin/destination &rarr; Select mode choice &rarr; Select trip purpose &rarr; Click submit! </p> </h5>
+  <h4> &nbsp; </h4> 
+</div>
+<h3> 
+<table> 
+ <tr> 
+  <td> 
+    <form> 
+      <p> City name: <input type="text" name="city"> &nbsp;&nbsp; <input type="button" value="Find"> </p>
+    </form>  
+    <form> 
+      <p> <input type="radio" name="AnalysisType" value="OD"> Origin-Destination <br>
+      <input type="radio" name="AnalysisType" value="general"> General Analysis </p> 
+    </form>
+    <form>
+      <p> Origin: <input type="text" name="origin" value=""> </p>
+      <p> Destination: <input type="text" name="destination" value=""> </p>
+    </form>
+    <form> <p> Mode Choice: 
+      <select> 
+         <option disable selected value> --- Select an Option --- </option>
+         <option value="ped"> Walking </option>
+         <option value="bike"> Biking </option>
+         <option value="transit"> Public Transit </option> </p> 
+      </select>  
+    </form> 
+    <form> 
+      <p> Trip Purpose: 
+        <select> 
+           <option disable selected value> --- Select an Option --- </option>
+           <option value="commute"> Commute </option>
+           <option value="exercise"> Exercise </option>
+           <option value="shopping"> Shopping </option> 
+        </select> 
+      </p> 
+    </form> 
+   </td>
+   <td>
+     <iframe width=850px height=300px src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12180.962749001712!2d-111.66552308022459!3d40.25915564999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1548789719033"> 
+     </iframe>
+   </td>
+  </tr>
+  <tr>
+   <td>
+     <div class= "ending">
+       <input type="button" value="Clear"> 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+       <input type="button" value="Submit"> 
+     </div>
+    <td>
+   </tr>
+  </table>
+  </h3> 
+ </body> 
+</html>
