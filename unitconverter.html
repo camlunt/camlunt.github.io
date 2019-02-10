@@ -17,11 +17,11 @@ h3 {font-family: "Times New Roman"; color: black;}
 .block1 {font-family: "Times New Roman"; font-size: 18px; color: red; margin-left: 420px}
 .block2 {font-family: "Times New Roman"; font-size: 18px; color: blue; margin-left: 420px}
 .eq {font-weight: normal; font-size: 18px}
+  .greenme {color: #087214;}
 </style>
 
 <script type="text/javascript">
 function computeme(innum){
-  
 var invar = document.getElementsByName("inputunits")
 var outvar = document.getElementsByName("outputunits")
 var innum = document.getElementById("givnum").value
@@ -59,16 +59,14 @@ mmeter[1] = 3.28084
 mmeter[2] = 1.094
 mmeter[3] = 0.0006214
 mmeter[4] = 1.0000
-mmeter[5] = 0.001
+mmeter[5] = 0.00100
 var mkilometer = new Array(6)
 mkilometer[0] = 39370.1
 mkilometer[1] = 3280.84
 mkilometer[2] = 1094.000
 mkilometer[3] = 0.6214
 mkilometer[4] = 1000.00
-mkilometer[5] = 1.0
-
-
+mkilometer[5] = 1.0000
    var arrindex = 1
    var unitsin = "inches"
    var unitsout = "kilometers"
@@ -78,14 +76,12 @@ else if (outvar[2].checked) {arrindex = 2; unitsout = "yards";}
 else if (outvar[3].checked) {arrindex = 3; unitsout = "miles";}
 else if (outvar[4].checked) {arrindex = 4; unitsout = "meters";}
 else if (outvar[5].checked) {arrindex = 5; unitsout = "kilometers";}
-  alert("index: " + arrindex)
-  if (invar[0].checked) {alert("hello there"); var answernum = innum * minches[arrindex]; alert(answernum); unitsout = "inches";}
+  if (invar[0].checked) {var answernum = innum * minches[arrindex]; unitsout = "inches";}
 else if (invar[1].checked) {answernum = innum * mfeet[arrindex]; unitsin = "feet";}
 else if (invar[2].checked) {answernum = innum * myard[arrindex]; unitsout = "yards";}
 else if (invar[3].checked) {answernum = innum * mmile[arrindex]; unitsout = "miles";}
 else if (invar[4].checked) {answernum = innum * mmeter[arrindex]; unitsout = "meters";}
 else if (invar[5].checked) {answernum = innum * mkilometer[arrindex]; unitsout = "kilometers";}
- alert("answer: " + answernum)
   document.getElementById('repeat').innerHTML = innum
   document.getElementById('answer').innerHTML = answernum.toFixed(3)
   document.getElementById('inputunits').innerHTML = unitsin
@@ -98,6 +94,7 @@ else if (invar[5].checked) {answernum = innum * mkilometer[arrindex]; unitsout =
     </title>
    
   </head>
+  
   <body>
     <h1>
       Welcome to <span class="screenname">camlunt</span>'s unit converter!
@@ -143,7 +140,7 @@ Step 3: Click to get the answer
   <br>
   <input type="button" name="compute" value="Compute" onClick="computeme()"/>
 <br>
-  Answer: 
+  <span class="greenme">Answer:</span>
   <span id="repeat"></span>
   <span id="inputunits"></span>
   <span class="eq">is equal to</span>
