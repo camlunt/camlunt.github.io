@@ -76,7 +76,7 @@ Step 3: Click to get the answer
 <script language=javascript>
 var invar = document.getElementsByName("inputunits")
 var outvar = document.getElementsByName("outputunits")
-var innum = document.getElementById('givnum')
+var innum = document.getElementById(givnum)
 /*var minches = new Array(6)
 minches[0] = 1.0
 minches[1] = 0.0833333
@@ -121,7 +121,7 @@ mkilometer[4] = 1000
 mkilometer[5] = 1.0
 */
 function computeme(innum){
-alert ("user input: " + "this is a number")
+alert ("user input: " + innum)
   var answernum = 0
   if (invar[0].checked) {
 if (outvar[0].checked) {answernum = innum * 1}
