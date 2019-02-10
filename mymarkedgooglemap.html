@@ -1,12 +1,20 @@
 <html>
 <body>
-<div id="mymap" style="height: 100%; padding: 0px;"> </div>
+  <style> 
+    #mymap { height: 100%;}
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+<div id="mymap"> </div>
 <script type="text/javascript">
 var Mapvar
 function showmap() {
 Mapvar = new google.maps.Map(document.getElementById('mymap'), {
 center: {lat: 33.372331, lng: -111.693444},
-zoom: 10 });
+zoom: 8 });
 
 var homecoord = {lat: 33.375289, lng: -111.681037};
 var churchcoord = {lat: 33.369015, lng: -111.679175};
