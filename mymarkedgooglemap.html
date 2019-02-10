@@ -14,7 +14,7 @@
 function showmap() {
   var Mapvar = new google.maps.Map(document.getElementById('mymap'),{
 center: {lat: 33.372331, lng: -111.693444},
-zoom: 12 });
+zoom: 14 });
 
 var homecoord = {lat: 33.375289, lng: -111.681037};
 var churchcoord = {lat: 33.369015, lng: -111.679175};
@@ -64,19 +64,19 @@ position: harkinscoord,
 map: Mapvar,
 title: "Harkins Movie Theater"
 });
-homemark.addListener('click', function () {
+homemark.addListener('click', function() {
 homeinfo.open(Mapvar, homemark);
 });
-churchmark.addListener('click', function () {
+churchmark.addListener('click', function() {
 churchinfo.open(Mapvar, churchmark);
 });
-hhsmark.addListener('click', function () {
+hhsmark.addListener('click', function() {
 hhsinfo.open(Mapvar, hhsmark);
 });
-riseupmark.addListener('click', function () {
+riseupmark.addListener('click', function() {
 riseupinfo.open(Mapvar, riseupmark);
 });
-harkinsmark.addListener('click', function () {
+harkinsmark.addListener('click', function() {
 harkinsinfo.open(Mapvar, harkinsmark);
 });
 }
