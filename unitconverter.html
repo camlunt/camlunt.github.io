@@ -18,65 +18,13 @@ h3 {font-family: "Times New Roman"; color: black;}
 .block2 {font-family: "Times New Roman"; font-size: 18px; color: blue; margin-left: 420px}
 .eq {font-weight: normal; font-size: 18px}
 </style>
-    
-    <title> 
-      camlunt's Unit Converter
-    </title>
-   
-  </head>
-  <body>
-    <h1>
-      Welcome to <span class="screenname">camlunt</span>'s unit converter!
-      </h1>
-    <h2>
-      <form>
-      Step 1: Enter a value<br>
-      <input type="text" id="givnum" />
-      <br>
-      Step 2: Select units
-      <br>
-        <span class="block1">US Units</span>
-      <span class="block2">Metric Units</span>
-    </h2>
-    <h3>
-      &nbsp;&nbsp; Input units: 
-      <span class="USunits">
-        <input type="radio" name="inputunits" value="iin"> inches </input>
-       <input type="radio" name="inputunits" value="ift"> feet </input>
-       <input type="radio" name="inputunits" value="iyd"> yards </input>
-       <input type="radio" name="inputunits" value="imi"> miles </input>
-      </span>
-      <span class="Metric">
-       <input type="radio" name="inputunits" value="im"> meters </input>
-       <input type="radio" name="inputunits" value="ikm"> kilometers </input>
-      </span>
-<br> <br>
- Output units: 
-      <span class="USunits">
-       <input type="radio" name="outputunits" value="oin"> inches </input>
-       <input type="radio" name="outputunits" value="oft"> feet </input>
-       <input type="radio" name="outputunits" value="oyd"> yards </input>
-       <input type="radio" name="outputunits" value="omi"> miles </input>
-      </span>
-      <span class="Metric">
-       <input type="radio" name="outputunits" value="om"> meters </input>
-       <input type="radio" name="outputunits" value="okm"> kilometers </input>
-      </span>
-</form>
-</h3>
-<h2>
-Step 3: Click to get the answer
-  <br>
-  <input type="button" name="compute" value="Compute" onClick="computeme()"/>
-<br>
-  Answer: <p id="repeat"></p> <span class="eq">is equal to</span> <p id="answer"></p>
-    </h2>
-</body>
 
-<script language=javascript>
+<script type="text/javascript">
+function computeme(innum){
+  
 var invar = document.getElementsByName("inputunits")
 var outvar = document.getElementsByName("outputunits")
-var innum = document.getElementById(givnum)
+var innum = document.getElementById("givnum").value
 /*var minches = new Array(6)
 minches[0] = 1.0
 minches[1] = 0.0833333
@@ -120,7 +68,7 @@ mkilometer[3] = 0.6214
 mkilometer[4] = 1000
 mkilometer[5] = 1.0
 */
-function computeme(innum){
+
 alert ("user input: " + innum)
   var answernum = 0
   if (invar[0].checked) {
@@ -202,4 +150,58 @@ else if (inunit = "ikm") {answernum = innum * mkilometer[arrindex]}
 
 </script>
     
+    <title> 
+      camlunt's Unit Converter
+    </title>
+   
+  </head>
+  <body>
+    <h1>
+      Welcome to <span class="screenname">camlunt</span>'s unit converter!
+      </h1>
+    <h2>
+      <form>
+      Step 1: Enter a value<br>
+      <input type="text" id="givnum" />
+      <br>
+      Step 2: Select units
+      <br>
+        <span class="block1">US Units</span>
+      <span class="block2">Metric Units</span>
+    </h2>
+    <h3>
+      &nbsp;&nbsp; Input units: 
+      <span class="USunits">
+        <input type="radio" name="inputunits" value="iin"> inches </input>
+       <input type="radio" name="inputunits" value="ift"> feet </input>
+       <input type="radio" name="inputunits" value="iyd"> yards </input>
+       <input type="radio" name="inputunits" value="imi"> miles </input>
+      </span>
+      <span class="Metric">
+       <input type="radio" name="inputunits" value="im"> meters </input>
+       <input type="radio" name="inputunits" value="ikm"> kilometers </input>
+      </span>
+<br> <br>
+ Output units: 
+      <span class="USunits">
+       <input type="radio" name="outputunits" value="oin"> inches </input>
+       <input type="radio" name="outputunits" value="oft"> feet </input>
+       <input type="radio" name="outputunits" value="oyd"> yards </input>
+       <input type="radio" name="outputunits" value="omi"> miles </input>
+      </span>
+      <span class="Metric">
+       <input type="radio" name="outputunits" value="om"> meters </input>
+       <input type="radio" name="outputunits" value="okm"> kilometers </input>
+      </span>
+</form>
+</h3>
+<h2>
+Step 3: Click to get the answer
+  <br>
+  <input type="button" name="compute" value="Compute" onClick="computeme()"/>
+<br>
+  Answer: <p id="repeat"></p> <span class="eq">is equal to</span> <p id="answer"></p>
+    </h2>
+</body>
+
 </html>
