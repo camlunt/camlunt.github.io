@@ -76,12 +76,12 @@ else if (outvar[2].checked) {arrindex = 2; unitsout = "yards";}
 else if (outvar[3].checked) {arrindex = 3; unitsout = "miles";}
 else if (outvar[4].checked) {arrindex = 4; unitsout = "meters";}
 else if (outvar[5].checked) {arrindex = 5; unitsout = "kilometers";}
-  if (invar[0].checked) {var answernum = innum * minches[arrindex]; unitsout = "inches";}
+  if (invar[0].checked) {var answernum = innum * minches[arrindex]; unitsin = "inches";}
 else if (invar[1].checked) {answernum = innum * mfeet[arrindex]; unitsin = "feet";}
-else if (invar[2].checked) {answernum = innum * myard[arrindex]; unitsout = "yards";}
-else if (invar[3].checked) {answernum = innum * mmile[arrindex]; unitsout = "miles";}
-else if (invar[4].checked) {answernum = innum * mmeter[arrindex]; unitsout = "meters";}
-else if (invar[5].checked) {answernum = innum * mkilometer[arrindex]; unitsout = "kilometers";}
+else if (invar[2].checked) {answernum = innum * myard[arrindex]; unitsin = "yards";}
+else if (invar[3].checked) {answernum = innum * mmile[arrindex]; unitsin = "miles";}
+else if (invar[4].checked) {answernum = innum * mmeter[arrindex]; unitsin = "meters";}
+else if (invar[5].checked) {answernum = innum * mkilometer[arrindex]; unitsin = "kilometers";}
   document.getElementById('answertitle').innerHTML = "Answer:"
   document.getElementById('repeat').innerHTML = innum
   document.getElementById('answer').innerHTML = answernum.toFixed(3)
@@ -115,25 +115,25 @@ else if (invar[5].checked) {answernum = innum * mkilometer[arrindex]; unitsout =
       &nbsp;&nbsp; Input units: 
       <span class="USunits">
         <label><input type="radio" name="inputunits" value="iin"> inches </input></label>
-       <input type="radio" name="inputunits" value="ift"> feet </input>
-       <input type="radio" name="inputunits" value="iyd"> yards </input>
-       <input type="radio" name="inputunits" value="imi"> miles </input>
+       <label><input type="radio" name="inputunits" value="ift"> feet </input></label>
+       <label><input type="radio" name="inputunits" value="iyd"> yards </input></label>
+       <label><input type="radio" name="inputunits" value="imi"> miles </input></label>
       </span>
       <span class="Metric">
-       <input type="radio" name="inputunits" value="im"> meters </input>
-       <input type="radio" name="inputunits" value="ikm"> kilometers </input>
+       <label><input type="radio" name="inputunits" value="im"> meters </input></label>
+       <label><input type="radio" name="inputunits" value="ikm"> kilometers </input></label>
       </span>
 <br> <br>
  Output units: 
       <span class="USunits">
-       <input type="radio" name="outputunits" value="oin"> inches </input>
-       <input type="radio" name="outputunits" value="oft"> feet </input>
-       <input type="radio" name="outputunits" value="oyd"> yards </input>
-       <input type="radio" name="outputunits" value="omi"> miles </input>
+       <label><input type="radio" name="outputunits" value="oin"> inches </input></label>
+       <label><input type="radio" name="outputunits" value="oft"> feet </input></label>
+       <label><input type="radio" name="outputunits" value="oyd"> yards </input></label>
+       <label><input type="radio" name="outputunits" value="omi"> miles </input></label>
       </span>
       <span class="Metric">
-       <input type="radio" name="outputunits" value="om"> meters </input>
-       <input type="radio" name="outputunits" value="okm"> kilometers </input>
+       <label><input type="radio" name="outputunits" value="om"> meters </input></label>
+       <label><input type="radio" name="outputunits" value="okm"> kilometers </input></label>
       </span>
 </form>
 </h3>
