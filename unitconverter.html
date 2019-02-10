@@ -25,7 +25,7 @@ function computeme(innum){
 var invar = document.getElementsByName("inputunits")
 var outvar = document.getElementsByName("outputunits")
 var innum = document.getElementById("givnum").value
-/*var minches = new Array(6)
+var minches = new Array(6)
 minches[0] = 1.0
 minches[1] = 0.0833333
 minches[2] = 0.0277778
@@ -67,8 +67,8 @@ mkilometer[2] = 1094
 mkilometer[3] = 0.6214
 mkilometer[4] = 1000
 mkilometer[5] = 1.0
-*/
 
+/*
 alert ("user input: " + innum)
   var answernum = 0
   if (invar[0].checked) {
@@ -108,8 +108,8 @@ else if (invar[5].checked) {
   document.getElementById('repeat').innerHTML = innum
   document.getElementById('answer').innerHTML = answernum
 }
-
-  /* var arrindex = 1
+*/
+   var arrindex = 1
   if (outvar[0].checked) {arrindex = 0}
 else if (outvar[1].checked) {arrindex = 1}
 else if (outvar[2].checked) {arrindex = 2}
@@ -118,16 +118,16 @@ else if (outvar[4].checked) {arrindex = 4}
 else if (outvar[5].checked) {arrindex = 5}
   alert("index: " + arrindex)
   if (invar[0].checked) {alert("hello there"); var answernum = innum * minches[arrindex]; alert(answernum)}
-else if (invar[1].checked) {answernum = innum * mfeet[5]}
+else if (invar[1].checked) {answernum = innum * mfeet[arrindex]}
 else if (invar[2].checked) {answernum = innum * myard[arrindex]}
 else if (invar[3].checked) {answernum = innum * mmile[arrindex]}
 else if (invar[4].checked) {answernum = innum * mmeter[arrindex]}
 else if (invar[5].checked) {answernum = innum * mkilometer[arrindex]}
  alert("answer: " + answernum)
-  document.getElementById("repeat").value = innum
-  document.getElementById("answer").value = answernum
+  document.getElementById('repeat').innerHTML = innum
+  document.getElementById('answer').innerHTML = answernum
 }
-*/
+
 
 /* 
 document.getElementById("compute").onclick = function compute(){
