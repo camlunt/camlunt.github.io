@@ -14,8 +14,8 @@
 function showmap() {
   var Mapvar = new google.maps.Map(document.getElementById('mymap'),{
 center: {lat: 33.372331, lng: -111.693444},
-zoom: 8 });
-/*
+zoom: 12 });
+
 var homecoord = {lat: 33.375289, lng: -111.681037};
 var churchcoord = {lat: 33.369015, lng: -111.679175};
 var hhscoord = {lat: 33.363476, lng: -111.698378};
@@ -79,7 +79,6 @@ riseupinfo.open(Mapvar, riseupmark);
 harkinsmark.addListener('click', function () {
 harkinsinfo.open(Mapvar, harkinsmark);
 });
-*/
 }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=showmap">
