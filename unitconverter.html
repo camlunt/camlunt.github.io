@@ -82,8 +82,10 @@ else if (invar[2].checked) {answernum = innum * myard[arrindex]; unitsout = "yar
 else if (invar[3].checked) {answernum = innum * mmile[arrindex]; unitsout = "miles";}
 else if (invar[4].checked) {answernum = innum * mmeter[arrindex]; unitsout = "meters";}
 else if (invar[5].checked) {answernum = innum * mkilometer[arrindex]; unitsout = "kilometers";}
+  document.getElementById('answertitle').innerHTML = "Answer:"
   document.getElementById('repeat').innerHTML = innum
   document.getElementById('answer').innerHTML = answernum.toFixed(3)
+  document.getElementById('eqtext').innerHTML = " is equal to "
   document.getElementById('inputunits').innerHTML = unitsin
   document.getElementById('outputunits').innerHTML = unitsout
 }
@@ -140,10 +142,10 @@ Step 3: Click to get the answer
   <br>
   <input type="button" name="compute" value="Compute" onClick="computeme()"/>
 <br>
-  <span class="greenme">Answer:</span>
+  <span class="greenme" id="answertitle"></span>
   <span id="repeat"></span>
   <span id="inputunits"></span>
-  <span class="eq">is equal to</span>
+  <span class="eq" id="eqtext"></span>
   <span id="answer"></span>
   <span id="outputunits"></span>
     </h2>
