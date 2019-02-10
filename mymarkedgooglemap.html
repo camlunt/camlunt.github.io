@@ -40,30 +40,30 @@ var harkinswindow = new google.maps.InfoWindow({
 content: harkinsinfo});
 
 var homemark = new google.maps.Marker({
-position: homecoor
-map: mymap
+position: homecoord,
+map: Mapvar,
 title: "Home"
-})
+});
 var churchmark = new google.maps.Marker({
-position: churchcoord
-map: mymap
+position: churchcoord,
+map: Mapvar,
 title: "My Church Building"
-})
+});
 var hhsmark = new google.maps.Marker({
-position: hhscoord
-map: mymap
+position: hhscoord,
+map: Mapvar,
 title: "My High School"
-})
+});
 var riseupmark = new google.maps.Marker({
-position: riseupcoord
-map: mymap
+position: riseupcoord,
+map: Mapvar,
 title: "My Family's Bakery"
-})
+});
 var harkinsmark = new google.maps.Marker({
-position: harkinscoord
-map: mymap
+position: harkinscoord,
+map: Mapvar,
 title: "Harkins Movie Theater"
-})
+});
 homemark.addListener('click', function () {
 homeinfo.open(Mapvar, homemark);
 });
