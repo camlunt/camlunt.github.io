@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Ten Places I Want to Go</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+<link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.8/"></script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
+
+
+<script>
+require(["esri/Map", "esri/views/MapView"], function(
+  Map,
+  MapView
+) {
+  const map = new Map({
+    basemap: "streets-navigation-vector"
+  });
+
+  const view = new MapView({
+    container: "viewDiv",
+    map: map,
+    zoom: 5,
+    center: {
+        latitude: 32.7353,
+        longitude: -117.1490
+    }
+  });
+  
+  const QingShuiWords = "The <a href='https://www.tripadvisor.com/Attraction_Review-g13806817-d6366814-Reviews-Kaomei_Wetland-Qingshui_Taichung.html'>GaoMei Wetlands</a> " + 
+        " is located on the west coast of Taiwan in Taichung county. There is a long boardwalk and, depending on the tide and season, at the end of it you can step into the water. Even if you can't get into the water that day, the surroundings are beautiful!" +
+        "<p><p><img src='https://media-cdn.tripadvisor.com/media/photo-s/11/8c/52/cb/the-wooden-path-out-to.jpg' alt='San Diego Zoo' height='150'>"; 
+ 
+ // add more Words here
+ 
+ // Begin COPY PASTE
+  view.graphics.add({
+    symbol: {
+      type: "text",
+        color: "#7A003C",
+        text: "\ue61d", // esri-icon-map-pin
+        font: {
+            size: 30,
+            family: "CalciteWebCoreIcons"
+        }
+    },
+    geometry: {
+      type: "point",
+      longitude: 120.57639
+      latitude: 24.28750
+    },
+    popupTemplate: {
+      title: "GaoMei Wetlands",
+      content: QingShuiWords
+    }
+  });
+ // end COPY PASTE
+  
+ // COPY PASTE goes right here
+ 
+});
+</script>
