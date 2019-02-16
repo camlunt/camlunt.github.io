@@ -45,31 +45,31 @@ require(["esri/Map", "esri/views/MapView"], function(
   
   const QingShuiWords = "The <a href='https://www.tripadvisor.com/Attraction_Review-g13806817-d6366814-Reviews-Kaomei_Wetland-Qingshui_Taichung.html'>GaoMei Wetlands</a> " + 
         " are located on the west coast of Taiwan in Taichung county. There is a long boardwalk and, depending on the tide and season, at the end of it you can step into the water. Even if you can't get into the water that day, the surroundings are beautiful!" +
-        "<p><p><img src='https://media-cdn.tripadvisor.com/media/photo-s/11/8c/52/cb/the-wooden-path-out-to.jpg' alt='GaoMei Wetlands' height='150'>"; 
+        "<p><p><img src='https://media-cdn.tripadvisor.com/media/photo-s/11/8c/52/cb/the-wooden-path-out-to.jpg' alt='GaoMei Wetlands' height='300'>"; 
   const GardenWords = "<a href='https://www.butchartgardens.com/our-story/'>Butchart Gardens</a> " + 
-        " is located on the west coast of Taiwan in Taichung county. There is a long boardwalk and, depending on the tide and season, at the end of it you can step into the water. Even if you can't get into the water that day, the surroundings are beautiful!" +
-        "<p><p><img src='http://lilyincanada.files.wordpress.com/2011/12/butchart-sunken-gardens.jpg' alt='Butchart Gardens' height='150'>"; 
+        " is located in British Colombia, Canada. It's 55 acres of beautiful flowers, trees, and shrubbery. The mist-like rain makes it even more magical." +
+        "<p><p><img src='http://lilyincanada.files.wordpress.com/2011/12/butchart-sunken-gardens.jpg' alt='Butchart Gardens' height='300'>"; 
   const BubbleWords = "The <a href='https://www.citrusmilo.com/acadiaguide/jordanpond.cfm'>Jordan Pond Path</a> " + 
         " is a beautiful, flat hike with a great view of Bubble Rock. There is a gravel path around the pond, but for the more child-like at heart, the edges of the pond are lined with rocks that are the perfect size to hop along. If you get hungry, there is also a delicious Popover store where you can enjoy the yummy taste of Maine Blueberry ice cream." +
-        "<p><p><img src='https://i.pinimg.com/originals/70/3c/f7/703cf73ca7630781c1bce1e65d488379.jpg' alt='Bubble Rock' height='150'>" +
-       "<p><p><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_5S5LSdk_A9m9MbH91jXjLxMwMDJ5IS5RICyknmAftNGmD47n' alt='Popover' height='150'>"; 
+        "<p><p><img src='https://i.pinimg.com/originals/70/3c/f7/703cf73ca7630781c1bce1e65d488379.jpg' alt='Bubble Rock' height='300'>" +
+       "<p><p><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_5S5LSdk_A9m9MbH91jXjLxMwMDJ5IS5RICyknmAftNGmD47n' alt='Popover' height='300'>"; 
   const TennisWords = "<a href='http://www.wimbledon.com/index.html'>Wimbledon</a> " + 
         " is one of the four official Slams in professional tennis, and the only one on grass. Roger Federer (my all-time favorite player) has won this tournament 8 times--more than any other player" +
-        "<p><p><img src='http://2018.wimbledon.com/images/pics/large/b_centre_court_347_180702_bm.jpg' alt='Wimbledon' height='150'>"; 
+        "<p><p><img src='http://2018.wimbledon.com/images/pics/large/b_centre_court_347_180702_bm.jpg' alt='Wimbledon' height='300'>"; 
   const MusicWords = "I love the <a href='https://www.phoenixsymphony.org/'> Phoenix Symphony</a> " + 
         " and have seen some great performances here. I always love the opportunity to go back!" +
-        "<p><p><img src='https://media.yourphx.com/nxsglobal/yourphx/photo/2015/08/21/symphony-hall_1440190686927_4190377_ver1.0_640_360.jpg' alt='Phoenix Symphony' height='150'>"; 
+        "<p><p><img src='https://media.yourphx.com/nxsglobal/yourphx/photo/2015/08/21/symphony-hall_1440190686927_4190377_ver1.0_640_360.jpg' alt='Phoenix Symphony' height='300'>"; 
   const DisneyWords = "Everyone's happy when they're at <a href='https://disneyworld.disney.go.com/destinations/all-parks/'> Walt Disney World</a>! " + 
         " Some of my favorite rides are: Splash Mountain, Space Mountain, Indiana Jones, Everest, and Rock'n'Rollercoaster." +
         "<p><p><img src='https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/360/75/dam/wdpro-assets/parks-and-tickets/destinations/all-parks/4-park-split-hero-900x360.jpg?1548777332566' alt='Walt Disney World' height='150'>"; 
   const KirtlandWords = "I've never been to any Church history sites (except for the ones in Utah) even though I've always wanted to see them. When I go on a Church history tour, Kirtland will definitely be one of the stops on my list." +
-        "<p><p><img src='https://media.ldscdn.org/images/media-library/gospel-art/gospel-in-action/kirtland-ohio-temple-andersen-159163-print.jpg?download=true' alt='Kirtland, Ohio' height='150'>"; 
-  const GenevaWords = "When my mom was in college, seh spent a summer working in Geneva, Switzerland. I'd love to go back with her and see the place that she loves so much. I've heard that the people are genuinely nice and that it's a beautiful city." +
-        "<p><p><img src='https://wherewouldyougo.com/wp-content/uploads/2017/03/street-Geneva-Switzerland.jpg' alt='Geneva, Switzerland' height='150'>"; 
+        "<p><p><img src='https://media.ldscdn.org/images/media-library/gospel-art/gospel-in-action/kirtland-ohio-temple-andersen-159163-print.jpg?download=true' alt='Kirtland, Ohio' height='300'>"; 
+  const GenevaWords = "When my mom was in college, she spent a summer working in Geneva, Switzerland. I'd love to go back with her and see the place that she loves so much. I've heard that the people are genuinely nice and that it's a beautiful city." +
+        "<p><p><img src='http://www.bedroomchecker.com/wp-content/uploads/2013/07/The-old-town-Switzerland.png' alt='Geneva, Switzerland' height='300'>"; 
   const BorneoWords = "My brother is currently on the island of Borneo serving a mission in Malaysia. I feel like a part of me is there right now." +
-        "<p><p><iframe width='560' height='315' src='https://www.youtube.com/embed/MzoWxYDhbKk' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+        "<p><p><iframe width='168' height='95' src='https://www.youtube.com/embed/MzoWxYDhbKk' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
   const ChinaWords = "I honestly want to go anywhere in China, but I think I especially want to see Shanghai because of the extremely cool infrastructure. Like, look at that epic pedestrian bridge!" +
-        "<p><p><img src='https://www.omm.com/~/media/images/site/locations/shanghai_780x520.ashx' alt='Shanghai, China' height='150'>"; 
+        "<p><p><img src='https://www.omm.com/~/media/images/site/locations/shanghai_780x520.ashx' alt='Shanghai, China' height='300'>"; 
  
  
    // Marker 1 - GaoMeiShiDi
