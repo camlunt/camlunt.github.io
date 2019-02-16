@@ -48,9 +48,13 @@ require(["esri/Map", "esri/views/MapView"], function(
         "<p><p><img src='https://media-cdn.tripadvisor.com/media/photo-s/11/8c/52/cb/the-wooden-path-out-to.jpg' alt='GaoMei Wetlands' height='150'>"; 
  const GardenWords = "The <a href='https://www.butchartgardens.com/our-story/'>Butchart Gardens</a> " + 
         " is located on the west coast of Taiwan in Taichung county. There is a long boardwalk and, depending on the tide and season, at the end of it you can step into the water. Even if you can't get into the water that day, the surroundings are beautiful!" +
-        "<p><p><img src='https://media-cdn.tripadvisor.com/media/photo-s/11/8c/52/cb/the-wooden-path-out-to.jpg' alt='Butchart Gardens' height='150'>"; 
+        "<p><p><img src='http://lilyincanada.files.wordpress.com/2011/12/butchart-sunken-gardens.jpg' alt='Butchart Gardens' height='150'>"; 
  const BubbleWords = "The <a href='https://www.citrusmilo.com/acadiaguide/jordanpond.cfm'>The Jordan Pond Path</a> " + 
         " is a beautiful, flat hike with a great view of Bubble Rock. There is a gravel path around the pond, but for the more child-like at heart, the edges of the pond are lined with rocks that are the perfect size to hop along. If you get hungry, there is also a delicious Popover store where you can enjoy the yummy taste of Maine Blueberry ice cream." +
+        "<p><p><img src='https://i.pinimg.com/originals/70/3c/f7/703cf73ca7630781c1bce1e65d488379.jpg' alt='Bubble Rock' height='150'>" +
+       "<p><p><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_5S5LSdk_A9m9MbH91jXjLxMwMDJ5IS5RICyknmAftNGmD47n' alt='Popover' height='150'>"; 
+  const TennisWords = "The <a href='http://www.wimbledon.com/index.html'>Wimbledon</a> " + 
+        " is one of the four official Slams in professional tennis, and the only one on grass. Roger Federer (my all-time favorite player) has won this tournament 8 times--more than any other player" +
         "<p><p><img src='https://i.pinimg.com/originals/70/3c/f7/703cf73ca7630781c1bce1e65d488379.jpg' alt='Bubble Rock' height='150'>" +
        "<p><p><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_5S5LSdk_A9m9MbH91jXjLxMwMDJ5IS5RICyknmAftNGmD47n' alt='Popover' height='150'>"; 
  
@@ -119,6 +123,27 @@ require(["esri/Map", "esri/views/MapView"], function(
     popupTemplate: {
       title: "Jordan Pond",
       content: BubbleWords
+    }
+  });
+    // Marker 3 - Wimbledon
+  view.graphics.add({
+    symbol: {
+      type: "text",
+        color: "#7A003C",
+        text: "\ue61d", // esri-icon-map-pin
+        font: {
+            size: 30,
+            family: "CalciteWebCoreIcons"
+        }
+    },
+    geometry: {
+      type: "point",      
+       longitude: 0.2206,
+      latitude: 51.4183
+    },
+    popupTemplate: {
+      title: "Wimbledon",
+      content: TennisWords
     }
   });
  // COPY PASTE goes right here
