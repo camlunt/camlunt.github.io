@@ -46,5 +46,19 @@ require(["esri/layers/MapImageLayer"], function(MapImageLayer){
   }
   ]
   });
+
+var map = new Map({
+basemap: "satellite",
+layers: [layer]
 });
+
+var view = new MapView({
+container: "viewDiv",
+map: map,
+zoom: 5,
+center: [-100, 39]
+});
+
+});
+
 </script>
