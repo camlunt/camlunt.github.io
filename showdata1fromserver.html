@@ -30,8 +30,11 @@ basemap: "satellite"
 var view = new MapView({
 container: "viewDiv",
 map: map,
-zoom: 5,
-center: [-100, 39]
+zoom: 12,
+center: {
+   latitude: 40.207877,
+   longitude: -111.673219
+}  //  #thanksemily
 });
    
 var layer = new MapImageLayer({
