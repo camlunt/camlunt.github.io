@@ -23,24 +23,11 @@ require([
 "esri/layers/MapImageLayer"
 ], function(Map, MapView, MapImageLayer){
   var layer = new MapImageLayer({
-  url: "https://geoserver2.byu.edu/arcgis/rest/services/GoConnected/GoOnGreen/MapServer",
-  sublayers: [
-  {
-  id: 0,
-  visible: true
-  }, {
-  id: 1,
-  visible: true
-  }, {
-  id: 2,
-  visible: true
-  }
-  ]
+  url: "http://geoserver2.byu.edu/arcgis/rest/services/GoConnected/GoOnGreen/MapServer"
   });
 
 var map = new Map({
-basemap: "satellite",
-layers: [layer]
+basemap: "satellite"
 });
 
 var view = new MapView({
@@ -50,6 +37,8 @@ zoom: 5,
 center: [-100, 39]
 });
 
+map.add(layer);
+   
 });
 
 </script>
