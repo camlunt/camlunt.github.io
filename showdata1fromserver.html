@@ -46,21 +46,5 @@ require(["esri/layers/MapImageLayer"], function(MapImageLayer){
   }
   ]
   });
-
-
-  const map = new Map({
-    basemap: "streets-navigation-vector"
-  });
-
-  const view = new MapView({
-    container: "viewDiv",
-    map: map,
-    zoom: 1,
-    center: {
-       latitude: 15,
-       longitude: 0
-    }
-  });
-
 });
 </script>
