@@ -1,0 +1,66 @@
+<html>
+<head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Embedded ArcMap Map</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+<link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.8/"></script>
+</head>
+
+<body>
+   <h1>Embedded ArcMap Map</h1><h3>Individual Assigment No. 8 - - February 27, 2019</h3>
+   <div id="viewDiv"></div>
+<footer>
+      <hr>
+      02/27/2019 by camlunt © 2019
+  </footer>
+</body>
+</html>
+
+
+<script>
+require(["esri/layers/MapImageLayer"], function(MapImageLayer){
+  var layer = new MapImageLayer({
+  url: "geoserver2.byu.edu/arcgis/rest/services/GoConnected/GoOnGreen/MapServer",
+  sublayers: [
+  {
+  id: 0,
+  visible: true
+  }, {
+  id: 1,
+  visible: true
+  }, {
+  id: 2,
+  visible: true
+  }
+  ]
+  });
+
+
+  const map = new Map({
+    basemap: "streets-navigation-vector"
+  });
+
+  const view = new MapView({
+    container: "viewDiv",
+    map: map,
+    zoom: 1,
+    center: {
+       latitude: 15,
+       longitude: 0
+    }
+  });
+
+});
+</script>
