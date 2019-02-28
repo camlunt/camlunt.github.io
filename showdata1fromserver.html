@@ -16,20 +16,7 @@
 
 <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
   <script src="https://js.arcgis.com/4.8/"></script>
-</head>
-
-<body>
-   <h1>Embedded ArcMap Map</h1><h3>Individual Assigment No. 8 - - February 27, 2019</h3>
-   <div id="viewDiv"></div>
-<footer>
-      <hr>
-      02/27/2019 by camlunt © 2019
-  </footer>
-</body>
-</html>
-
-
-<script>
+    <script>
 require(["esri/layers/MapImageLayer"], function(MapImageLayer){
   var layer = new MapImageLayer({
   url: "geoserver2.byu.edu/arcgis/rest/services/GoConnected/GoOnGreen/MapServer",
@@ -62,3 +49,17 @@ center: [-100, 39]
 });
 
 </script>
+</head>
+
+<body>
+   <h1>Embedded ArcMap Map</h1><h3>Individual Assigment No. 8 - - February 27, 2019</h3>
+   <div id="viewDiv"></div>
+<footer>
+      <hr>
+      02/27/2019 by camlunt © 2019
+  </footer>
+</body>
+</html>
+
+
+
