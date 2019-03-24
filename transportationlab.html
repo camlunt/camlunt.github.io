@@ -3,13 +3,67 @@
     <title>
     BYU Transportation Research Lab
     </title>
-    <stlye>
+    <style>
+       h3 {
+        font-weight: normal;
+        font-style: italic;
+}
+
+#screens {
+  background-color: red;
+}
+
+#projects {
+  background-color: lime;
+}
+
+#people {
+  background-color: violet;
+}
+
+#silver {
+  background-color: gold;
+}
+
+#phasing {
+  background-color: cyan;
+}
+
+tr {
+  height: 50px;
+}
+
+td {
+  padding: 20px;
+   }
+
+table {
+   border-spacing: 50px;
+}
+      
     </style>
   </head>
   <body>
-    <h1>Welcome to the Transportation Research Lab!</h1>
+     <h1>Welcome to the Transportation Research Lab!</h1>
     <h3>We are part of the Civil Engineering Department here at BYU.</h3>
-    <h3>View bellow to see when you can view the ISS in the Sky from BYU</h3>
-    <div style='display:inline-block; border: 1px solid #CCC; border-radius: 6px; -webkit-border-radius: 6px; -o-border-radius: 6px; position: relative; overflow: hidden; width: 310px; height: 450px;'><iframe src='https://spotthestation.nasa.gov/widget/widget.cfm?country=United_States&region=Utah&city=Provo&theme=2' width='310' height='450' frameborder='0' ></iframe></div>
+    <p>Want to learn more about us? Click on the buttons below!</p>
+    <table>
+      <tr>
+        <td id="screens">
+          <div>What are those cool screens with the cars on them?</div>
+        </td>
+        <td id="projects">
+          <div>What type of research projects do you work on?</div>
+        </td>
+        <td id="people">
+          <div>How many people work in here?</div>
+        </td>
+        <td id="silver">
+          <div>What is that metal box thing?</div>
+        </td>
+        <td id="phasing">
+          <div>What is the squarish thing below the whiteboard?</div>
+        </td>
+    </table>
   </body>
 </html>
