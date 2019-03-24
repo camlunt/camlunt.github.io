@@ -3,7 +3,12 @@
     <title>
     Transportation Research Lab
     </title>
-    
+    <script>
+      function changeSCREENwords() {
+        document.getElementById("screens2").innerHTML="These screens are live feed of state route throughout Utah."
+        //maybe try a loop so you can click it on and off. Or just look it up on stack exchange.
+      }
+    </script>
     <style>
       
       h1 {
@@ -68,8 +73,8 @@
     <p>Want to learn more about us? Click on the buttons below!</p>
     <table>
       <tr>
-        <td id="screens">
-          <div>What are those cool screens with the cars on them?</div>
+        <td id="screens" onclick="changeSCREENwords()">
+          <div id="screens2">What are those cool screens with the cars on them?</div>
         </td>
         <td id="projects">
           <div>What type of research projects do you work on?</div>
