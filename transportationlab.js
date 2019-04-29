@@ -11,11 +11,11 @@
     phasingA = "It's a phasing diagram. It cycles through a stoplight timing system, and we can program it to give longer greens to the main road, shorter left turn times, etc.";
 
     //paste in the default strings (questions); should happen when page is loaded or refreshed
-    document.getElementById("screens2").innerHTML=screenQ;
-    document.getElementById("projects2").innerHTML=projectQ;
-    document.getElementById("people2").innerHTML=peopleQ;
-    document.getElementById("silver2").innerHTML=silverQ;
-    document.getElementById("phasing2").innerHTML=phasingQ;
+    document.getElementById("screens2").innerText=screenQ;
+    document.getElementById("projects2").innerText=projectQ;
+    document.getElementById("people2").innerText=peopleQ;
+    document.getElementById("silver2").innerText=silverQ;
+    document.getElementById("phasing2").innerText=phasingQ;
 
     //functions from the onclicks
     //Function 1
