@@ -1,0 +1,317 @@
+<html>
+  <body>
+    <div id="notecard">
+      <h1 id="question">Who should be your best friend from Kensington 11?</h1>
+      <p id="option1"> </p>
+      <p id="option2"> </p>
+      <p id="option3"> </p>
+      <p id="option4"> </p>
+    </div>
+    <div id="submit">
+      <p id="BUTTON"><input type = "button" value = "Start" id="clickmestart" onclick="askGamesQ()"/></p>
+    </div>
+  </body>
+</html>
+
+<style>
+  body {background-color: #f3c4dc;}
+  #notecard {background-color: #19a043; border-radius: 10px; padding-top: 5px; margin-left: 10px; margin-top: 30px; width: 660px; height: 240px;}
+  h1 {margin-left: 20px; font-weight: bold; font-size: 24px; color: white; font-family: "Trebuchet MS";}
+  p {margin-left: 40px; font-weight: normal; font-size: 16px; color: white; font-family: "Trebuchet MS";}
+  #clickmestart {padding: 10px; font-size: 16px; margin-left: 280px; font-family: "Trebuchet MS"; border-radius: 3px; background-color: #19a043; color: white;}
+  #clickmenext {padding: 10px; font-size: 16px; font-family: "Trebuchet MS"; border-radius: 3px; background-color: #19a043; color: white;}
+  #clickmefinish {padding: 10px; font-size: 16px; margin-left: 280px; font-family: "Trebuchet MS"; border-radius: 3px; background-color: #19a043; color: white;}
+</style>
+
+<script>
+  //codepen.io/pen is a useful website for starting from scratch
+
+  //variables
+  LelaPts=0;
+  CamillePts=0;
+  BeksPts=0;
+  KenyaPts=0;
+
+  //games question
+  function askGamesQ() {
+  	document.getElementById("question").innerHTML = "How do you feel about board/card games?";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'games' id='love'/>Love them!</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'games' id='hate'/>Not a fan</label>";
+  	document.getElementById("option3").innerHTML = "";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Next Question' id='clickmenext' onclick='calcGames()'/>";
+  }
+
+  function calcGames() {
+  	if(document.getElementById("love").checked){
+  		LelaPts++;
+  		CamillePts++;
+  	}
+	  else if(document.getElementById("hate").checked){
+  		BeksPts++;
+  		KenyaPts++;
+  	}
+  	askCurryQ();
+  }
+
+  //curry question
+  function askCurryQ() { 
+  	document.getElementById("question").innerHTML = "Choose a type of curry:";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'curry' id='japan'/>Japanese</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'curry' id='thai'/>Thai</label>";
+  	document.getElementById("option3").innerHTML = "<label><input type = 'radio' name = 'curry' id='butter'/>Butter Chicken</label>";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Next Question' id='clickmenext' onclick='calcCurry()'/>";
+  }
+
+  function calcCurry() {
+  	if(document.getElementById("japan").checked){CamillePts++;}
+  	else if(document.getElementById("thai").checked){LelaPts++; KenyaPts++;}
+  	else if(document.getElementById("butter").checked){BeksPts++;}
+  	askSpBreakQ();
+  }
+
+  //spring break question
+  function askSpBreakQ() {
+  	document.getElementById("question").innerHTML = "Spring Break! What do you do?";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'spbreak' id='road'/>Road Trip!</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'spbreak' id='home'/>Find something fun to do in town</label>";
+  	document.getElementById("option3").innerHTML = "";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Next Question' id='clickmenext' onclick='calcSpBreak()'/>";
+  }
+
+  function calcSpBreak() {
+  	if(document.getElementById("road").checked){
+  		LelaPts++;
+  		BeksPts++;
+	  }
+	  else if(document.getElementById("home").checked){
+  		CamillePts++;
+  		KenyaPts++;
+  	}
+  	askTraitQ();
+  }
+
+  //character trait
+  function askTraitQ() {
+  	document.getElementById("question").innerHTML = "Choose a character trait";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'trait' id='humor'/>Humor</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'trait' id='loyal'/>Responsibility</label>";
+  	document.getElementById("option3").innerHTML = "<label><input type = 'radio' name = 'trait' id='integ'/>Integrity</label>";
+  	document.getElementById("option4").innerHTML = "<label><input type = 'radio' name = 'trait' id='anchor'/>Anchored</label>";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Next Question' id='clickmenext' onclick='calcTrait()'/>";
+  }
+
+  function calcTrait() {
+  	if(document.getElementById("humor").checked){KenyaPts++;}
+  	else if(document.getElementById("loyal").checked){LelaPts++;}
+  	else if(document.getElementById("integ").checked){LelaPts++;}
+  	else if(document.getElementById("anchor").checked){BeksPts++;}
+  	askGymQ();
+  }
+
+  //at the gym
+  function askGymQ() {
+  	document.getElementById("question").innerHTML = "You're at the gym, what do you do?";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'gym' id='courts'/>Use the courts</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'gym' id='treadmill'/>Use the machines (treadmill, weights, etc.)</label>";
+  	document.getElementById("option3").innerHTML = "<label><input type = 'radio' name = 'gym' id='swim'/>Swim</label>";
+  	document.getElementById("option4").innerHTML = "<label><input type = 'radio' name = 'gym' id='class'/>One of the classes (e.g. kickboxing, zumba, spin etc.)</label>";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Next Question' id='clickmenext' onclick='calcGym()'/>";
+  }
+
+  function calcGym() {
+  	if(document.getElementById("courts").checked){
+  		CamillePts++;		
+		}
+	  else if(document.getElementById("treadmill").checked){
+  		KenyaPts++;
+  		LelaPts++;
+  		BeksPts++;
+ 		}
+  	else if(document.getElementById("swim").checked){
+	  	KenyaPts++;
+		}
+	  else if(document.getElementById("class").checked){
+		  BeksPts++;
+		  LelaPts++;
+		  CamillePts++;
+		}
+	  askExerciseQ();
+  }
+
+  // exercise
+  function askExerciseQ() {
+  	document.getElementById("question").innerHTML = "Oh no, the gym's closed! How will you get in your exercise?";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'exercise' id='inside'/>Do a home workout</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'exercise' id='frisbee'/>Play Ultimate Frisbee</label>";
+  	document.getElementById("option3").innerHTML = "<label><input type = 'radio' name = 'exercise' id='climbing'/>Go rock climbing</label>";
+  	document.getElementById("option4").innerHTML = "<label><input type = 'radio' name = 'exercise' id='swing'/>Go swing dancing</label>";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Next Question' id='clickmenext' onclick='calcExercise()'/>";
+  }
+
+  function calcExercise() {
+  	if(document.getElementById("inside").checked){
+  		KenyaPts++;
+  		}
+  	else if(document.getElementById("frisbee").checked){
+  		CamillePts++;
+  		}
+  	else if(document.getElementById("climbing").checked){
+  		LelaPts++;
+  		}
+  	else if(document.getElementById("swing").checked){
+  		BeksPts++;
+  		}
+  	askSaturdayQ();
+  }
+
+  //free Saturday
+  function askSaturdayQ() {
+  	document.getElementById("question").innerHTML = "What would you do on a free Saturday?";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'saturday' id='sport'/>play a sport</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'saturday' id='camp'/>go camping/hiking</label>";
+  	document.getElementById("option3").innerHTML = "<label><input type = 'radio' name = 'saturday' id='create'/>do something creative</label>";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Next Question' id='clickmenext' onclick='calcSaturday()'/>";
+  }
+
+  function calcSaturday() {
+  	if(document.getElementById("sport").checked){
+  		CamillePts++;
+  	}
+  	else if(document.getElementById("camp").checked){
+  		LelaPts++; 
+  		BeksPts++;
+  	}
+  	else if(document.getElementById("create").checked){
+	  	KenyaPts++;
+	  }
+	  askPlaceQ();
+  }
+
+  //place to live
+  function askPlaceQ() {
+  	document.getElementById("question").innerHTML = "Where is your ideal place to live?";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'place' id='hot'/>Just anywhere not cold, please!</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'place' id='mountains'/>I just want to be near mountains</label>";
+  	document.getElementById("option3").innerHTML = "<label><input type = 'radio' name = 'place' id='variety'/>Somewhere with variety</label>";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Next Question' id='clickmenext' onclick='calcPlace()'/>";
+  }
+
+  function calcPlace() {
+  	if(document.getElementById("hot").checked){CamillePts++; KenyaPts++;}
+  	else if(document.getElementById("mountains").checked){LelaPts++; BeksPts++;}
+  	else if(document.getElementById("variety").checked){}
+  	askSabbathQ();
+  }
+
+  //Sabbath worship
+  function askSabbathQ() {
+  	document.getElementById("question").innerHTML = "What is your favorite way to have an uplifting Sabbath?";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'sabbath' id='listen'/>Listening to music</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'sabbath' id='sing'/>Singing or playing music</label>";
+  	document.getElementById("option3").innerHTML = "<label><input type = 'radio' name = 'sabbath' id='social'/>Spend time with family/friends</label>";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Next Question' id='clickmenext' onclick='calcSabbath()'/>";
+  }
+
+  function calcSabbath() {
+  	if(document.getElementById("listen").checked){
+  		BeksPts++;
+  		KenyaPts++;
+ 	  	LelaPts++;
+  		CamillePts++;
+	  }
+	  else if(document.getElementById("sing").checked){
+  		CamillePts++;
+  	}
+  	else if(document.getElementById("social").checked){
+  		LelaPts++;
+  		KenyaPts++;
+  		BeksPts++;
+  	}
+  	askCountryQ();
+  }
+
+  //Country music 
+  function askCountryQ() {
+  	document.getElementById("question").innerHTML = "How do you feel about Country music?";
+  	document.getElementById("option1").innerHTML = "<label><input type = 'radio' name = 'country' id='cantstand'/>Can't stand it</label>";
+  	document.getElementById("option2").innerHTML = "<label><input type = 'radio' name = 'country' id='tolerate'/>I can tolerate it</label>";
+  	document.getElementById("option3").innerHTML = "<label><input type = 'radio' name = 'country' id='lovecountry'/>Love it!</label>";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "<input type = 'button' value = 'Finish' id='clickmefinish' onclick='calcCountry()'/>";
+  }
+
+  function calcCountry() {
+  	if(document.getElementById("cantstand").checked){
+  		BeksPts = BeksPts - 3;
+  		LelaPts = LelaPts - 3;
+  	}
+  	else if(document.getElementById("tolerate").checked){
+	  	
+	  }
+	else if(document.getElementById("lovecountry").checked){
+  		LelaPts++;
+  		BeksPts++;
+  	}
+  	finish();
+  }
+
+  function finish() {
+
+  	winningPts = Math.max(LelaPts,CamillePts,BeksPts,KenyaPts);
+
+	  if(LelaPts == winningPts) {
+  		LelaWins();
+  	} 
+  	else if(CamillePts == winningPts) {
+  		CamilleWins();
+  	} 
+  	else if (BeksPts == winningPts) {
+  		BeksWins();
+  	} 
+  	else if (KenyaPts == winningPts) {
+	  	KenyaWins();
+	  }
+  }
+
+  function LelaWins() {
+  	document.getElementById("question").innerHTML = "Congratulations! You should be friends with... the lovely LELA!";
+  	document.getElementById("option1").innerHTML = "Here are some things you should know about Lela:";
+  	document.getElementById("option2").innerHTML = "She's a super fun-loving, adventurous girl who is always up for a challenge. Whether she is playing cards, hiking, or caring for a friend, she always puts her whole heart and soul into it!";
+  	document.getElementById("option3").innerHTML = "";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "";
+  }
+
+  function BeksWins() {
+  	document.getElementById("question").innerHTML = "Congratulations! You should be friends with... the beautiful BEKS!";
+  	document.getElementById("option1").innerHTML = "Here are some things you should know about Beks:";
+  	document.getElementById("option2").innerHTML = "Known by many names (Beks, Rebekah, Bekah, Silly Goose), she is always up for trying something new. She loves cooking exotic foods, doing calligraphy, and swing dancing. ";
+   	document.getElementById("option3").innerHTML = "";
+	  document.getElementById("option4").innerHTML = "";
+	  document.getElementById("BUTTON").innerHTML = "";
+  }
+
+  function KenyaWins() {
+  	document.getElementById("question").innerHTML = "Congratulations! You should be friends with... the captivating KENYA!";
+  	document.getElementById("option1").innerHTML = "Here are some things you should know about Kenya:";
+  	document.getElementById("option2").innerHTML = "Kenya is a jack of all trades. Seriously; there is hardly a skill out there that she has not tried her hand at (and she's usually good at them too). She has a soft spot for animals and nature, and you can bet any moment you spend with her will not be dull.";
+  	document.getElementById("option3").innerHTML = "";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "";
+  }
+
+  function CamilleWins() {
+  	document.getElementById("question").innerHTML = "Congratulations! You should be friends with... the cute CAMILLE!";
+  	document.getElementById("option1").innerHTML = "Here are some things you should know about Camille:";
+  	document.getElementById("option2").innerHTML = "Camille is always on the go. While you can occasionally find her relaxing in her hammock, playing the flute, or practicing her photography skills, she prefers to be doing something fun with her friends. Good-naturedly competitive, she loves games and playing sports.";
+  	document.getElementById("option3").innerHTML = "";
+  	document.getElementById("option4").innerHTML = "";
+  	document.getElementById("BUTTON").innerHTML = "";
+  }
+</script>
